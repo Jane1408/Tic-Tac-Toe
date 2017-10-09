@@ -1,0 +1,211 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: block;
+}
+
+.appScene {
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.25);
+    width: 500px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    height: 50px;
+    background-color: black;
+    box-shadow: 0 3px 3px #575555;
+    padding: 10px 20px 0;
+}
+.header .text {
+    position: inherit;
+    font-size: 25px;
+    color: white;
+}
+
+.playerName, .opponentName {
+    position: absolute;
+    height: 30px;
+    background-color: transparent;
+    color: black;
+    padding: 10px 40px 0;
+}
+
+.opponentName {
+    right:0;
+}
+
+.newGameButton {
+    position: absolute;
+    background-color: #20B2AA;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    bottom:30px;
+    right:30px;
+    width: 50px;
+    height: 50px;
+}
+
+.newGameButton:focus{
+    outline: none;
+}
+
+.newGameButton:active{
+    background-color: #5F9EA0;
+    outline: none;
+}
+
+.field {
+    position: relative;
+    display: block;
+    margin: 70px 89px;
+}
+
+.filed .line{
+    display:block;
+}
+
+.field .block{
+    display: inline-block;
+    background-color: transparent;
+    border: 2px;
+    border-style: solid;
+    border-color: yellow;
+    width: 100px;
+    height: 100px;
+}
+.zero, .zeroSymbol{
+    position: absolute;
+    display: block;
+    background-color: rgba(128, 128, 128, 0);
+}
+
+.zeroSymbol{
+    margin: 12px;
+    width:70px;
+    height: 70px;
+    background-color: rgba(128, 128, 128, 0);
+    border-radius: 50px;
+    border: 2px solid #333;
+}
+
+.zero {
+    width:26px;
+    height: 26px;
+    border-radius: 20px;
+    border: 2px solid #333;
+    right: 0;
+}
+.cross, .crossSymbol{
+    position: absolute;
+}
+
+.crossSymbol {
+    width: 70px;
+    height: 70px;
+    margin: 0 12px;
+    }
+
+.crossSymbol:before, .crossSymbol:after {
+    position: absolute;
+    content: ' ';
+    left: 34px;
+    height: 90px;
+    width: 2px;
+    background-color: #333;
+    }
+
+.cross {
+    width: 32px;
+    height: 32px;
+    }
+
+.cross:before, .cross:after {
+    position: absolute;
+    content: ' ';
+    left: 15px;
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+    }
+
+.cross:before, .crossSymbol:before {
+    transform: rotate(45deg);
+    }
+
+.cross:after, .crossSymbol:after {
+    transform: rotate(-45deg);
+    }
+
+.crossPlayer, .zeroPlayer{
+    position: absolute;
+    display: inline-block;
+    height: 40px;
+    width: 250px;
+    margin: 20px 30px;
+}
+
+.zeroPlayer{
+    right: 0;
+}
+
+.gameProcButton {
+    position: absolute;
+    background-color: #20B2AA;
+    border: 2px solid #008B8B;
+    width: 150px;
+    height: 30px;
+    margin: 0 173px;
+    padding: 10px 0;
+    text-align: center;
+}
+.gameProcButton:active{
+    background-color: #008B8B;
+    
+}
+
+.gameProcButton .text {
+    font-size: 15px;
+    
+    color: white;
+}
+
+.gamesList{
+    width: 448px;
+    margin: 50px 26px;
+}
+
+.gameItem_ready, .gameItem_playing, .gameItem_done{
+    position: static;
+    display: inline-block;
+    color: #FFFFFF;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.gameItem_ready{
+    background-color: #A2A0A0;
+}
+
+.gameItem_playing{
+    background-color: #787272;
+}
+.gameItem_done{
+    background-color: #565555;
+}
+
+.turnLine_cross, .turnLine_zero{
+    position: absolute;
+    height: 2px;
+    width:100px;
+    background-color: #000000;
+    bottom:0;
+    display: none;
+}
+
+.turnLine_zero{
+    right:0;
+}
